@@ -10,7 +10,7 @@ class MigrationServiceProvider extends \Illuminate\Database\MigrationServiceProv
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         // Dynamically load migrations from all directories under `src/Domain/Gamification/Database/Migrations`
         // You can load migrations from a custom directory
