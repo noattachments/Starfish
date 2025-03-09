@@ -37,7 +37,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tests\\": "tests/"
+            "Tests\\": "tests/",
+            "Domain\\*\\Tests\\": "src/Domain/*/Test"
         }
     },
     "scripts": {
