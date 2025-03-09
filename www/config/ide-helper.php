@@ -11,7 +11,7 @@ return [
     |
     */
 
-    'filename' => '_ide_helper.php',
+    'filename' => 'meta/_ide_helper.php',
 
     /*
     |--------------------------------------------------------------------------
@@ -22,7 +22,7 @@ return [
     |
     */
 
-    'models_filename' => '_ide_helper_models.php',
+    'models_filename' => 'meta/_ide_helper_models.php',
 
     /*
     |--------------------------------------------------------------------------
@@ -34,7 +34,7 @@ return [
     | `.phpstorm.meta.php/laravel_ide_Helper.php'.
     |
     */
-    'meta_filename' => '.phpstorm.meta.php',
+    'meta_filename' => 'meta/.phpstorm.meta.php',
 
     /*
     |--------------------------------------------------------------------------
