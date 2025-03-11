@@ -2,9 +2,10 @@
 
 namespace Foundation\Providers;
 
+use Domain\Emoji\EmojiServiceProvider;
 use Illuminate\Support\ServiceProvider;
 
-class FoundationServiceProvider extends ServiceProvider
+final class FoundationServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
@@ -13,6 +14,7 @@ class FoundationServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-
+        // Register the EmojiServiceProvider
+        $this->app->register(EmojiServiceProvider::class);
     }
 }
