@@ -12,6 +12,7 @@ RUN apk add --no-cache  \
     gcc \
     make \
     libc-dev \
+    openssl-dev \
     pkgconfig \
     linux-headers \
     php${PHP_INSTALLED_VERSION}-dev \
