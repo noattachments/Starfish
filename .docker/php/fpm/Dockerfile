@@ -24,9 +24,14 @@ RUN apk add --no-cache  \
 RUN pecl install xdebug \
     docker-php-ext-enable xdebug
 #----------------------------------------------------------------
+## Install mongodb
+RUN pecl install mongodb \
+    docker-php-ext-enable mongodb
+#----------------------------------------------------------------
 ## Add PHP-FPM pool configuration
 COPY ./.docker/php/fpm/conf.d/www.conf /etc/php82/php-fpm.d/www.conf
 COPY ./.docker/php/conf.d/xdebug.ini /etc/php82/conf.d/50_xdebug.ini
+COPY ./.docker/php/conf.d/mongodb.ini /etc/php82/conf.d/30-mongodb.ini
 #----------------------------------------------------------------
 ## Set working directory (as root initially)
 WORKDIR $APP_CODE_PATH
