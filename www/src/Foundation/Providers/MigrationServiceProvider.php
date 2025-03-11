@@ -1,6 +1,6 @@
 <?php
 
-namespace Foundation\Infrastructure\Providers;
+namespace Foundation\Providers;
 
 class MigrationServiceProvider extends \Illuminate\Database\MigrationServiceProvider
 {

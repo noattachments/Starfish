@@ -1,9 +1,8 @@
 <?php
 
-namespace Foundation\Infrastructure\Factories;
+namespace Foundation\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 
 abstract class DomainFactory extends Factory
 {

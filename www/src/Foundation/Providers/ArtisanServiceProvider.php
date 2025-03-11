@@ -1,11 +1,11 @@
 <?php
 
-namespace Foundation\Infrastructure\Providers;
+namespace Foundation\Providers;
 
-use Foundation\Infrastructure\Console\MakeRepositoryCommand;
-use Foundation\Infrastructure\Console\ModelMakeCommand;
-use Foundation\Infrastructure\Console\RequestMakeCommand;
-use Foundation\Infrastructure\Console\TestMakeCommand;
+use Foundation\Console\MakeRepositoryCommand;
+use Foundation\Console\ModelMakeCommand;
+use Foundation\Console\RequestMakeCommand;
+use Foundation\Console\TestMakeCommand;
 
 final class ArtisanServiceProvider extends \Illuminate\Foundation\Providers\ArtisanServiceProvider
 {

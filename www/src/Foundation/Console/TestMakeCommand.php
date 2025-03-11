@@ -1,8 +1,9 @@
 <?php
 
-namespace Foundation\Infrastructure\Console;
+namespace Foundation\Console;
 
-use Foundation\Infrastructure\Concerns\MakeTrait;
+use Foundation\Concerns\MakeTrait;
+use Foundation\Infrastructure\Console\Str;
 use Symfony\Component\Console\Attribute\AsCommand;
 
 #[AsCommand(name: 'make:test')]

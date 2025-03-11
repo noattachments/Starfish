@@ -1,6 +1,6 @@
 <?php
 
-namespace Foundation\Infrastructure\Factories;
+namespace Foundation\Factories;
 
 trait HasFactory
 {
@@ -9,7 +9,7 @@ trait HasFactory
      *
      * @param  callable|array|int|null  $count
      * @param callable|array $state
-     * @return \Foundation\Infrastructure\Factories\DomainFactory<static>
+     * @return \Foundation\Factories\DomainFactory<static>
      */
     public static function factory($count = null, callable|array $state = []): DomainFactory
     {

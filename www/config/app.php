@@ -174,7 +174,7 @@ return [
         /**
          * Laravel Framework Service Providers...
          */
-        \Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class => Foundation\Infrastructure\Providers\ConsoleSupportServiceProvider::class,
+        \Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class => \Foundation\Providers\ConsoleSupportServiceProvider::class,
     ])->toArray(),
 
     /*
