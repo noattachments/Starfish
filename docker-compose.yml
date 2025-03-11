@@ -80,6 +80,7 @@ services:
       - app-network
     depends_on:
       - php
+      - mongodb
 
   php-worker:
     build:
@@ -99,7 +100,7 @@ services:
     depends_on:
       - php-fpm
       - mysql
-#    command: php artisan queue:work --tries=3
+  #    command: php artisan queue:work --tries=3
 
   node:
     build:
@@ -170,6 +171,22 @@ services:
         max-size: "10m"
         max-file: "5"
 
+  mongodb:
+    build:
+      context: .
+      dockerfile: .docker/mongo/Dockerfile
+    container_name: starfish_mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+    networks:
+      - app-network
+
   smtp:
     build:
       context: .
@@ -189,4 +206,6 @@ volumes:
   db_data:
     driver: local
   certs:
+    driver: local
+  mongodb_data:
     driver: local
