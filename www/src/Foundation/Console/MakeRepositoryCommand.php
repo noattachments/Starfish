@@ -1,8 +1,8 @@
 <?php
 
-namespace Foundation\Infrastructure\Console;
+namespace Foundation\Console;
 
-use Foundation\Infrastructure\Concerns\MakeTrait;
+use Foundation\Concerns\MakeTrait;
 use Illuminate\Console\GeneratorCommand;
 
 final class MakeRepositoryCommand extends GeneratorCommand

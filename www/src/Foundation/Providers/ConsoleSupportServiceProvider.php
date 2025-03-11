@@ -1,6 +1,6 @@
 <?php
 
-namespace Foundation\Infrastructure\Providers;
+namespace Foundation\Providers;
 
 final class ConsoleSupportServiceProvider extends \Illuminate\Foundation\Providers\ConsoleSupportServiceProvider
 {
@@ -10,8 +10,8 @@ final class ConsoleSupportServiceProvider extends \Illuminate\Foundation\Provide
      * @var array
      */
     protected $providers = [
-        \Foundation\Infrastructure\Providers\ArtisanServiceProvider::class,
-        \Foundation\Infrastructure\Providers\MigrationServiceProvider::class,
+        \Foundation\Providers\ArtisanServiceProvider::class,
+        \Foundation\Providers\MigrationServiceProvider::class,
         \Illuminate\Foundation\Providers\ComposerServiceProvider::class,
 //        \Foundation\Repository\RepositoryServiceProvider::class,
     ];

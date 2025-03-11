@@ -1,6 +1,6 @@
 <?php
 
-namespace Foundation\Infrastructure\Concerns;
+namespace Foundation\Concerns;
 
 trait MakeTrait
 {

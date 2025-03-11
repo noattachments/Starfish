@@ -1,7 +1,7 @@
 <?php
 
-namespace Foundation\Infrastructure\Console;
-use Foundation\Infrastructure\Concerns\MakeTrait;
+namespace Foundation\Console;
+use Foundation\Concerns\MakeTrait;
 use Symfony\Component\Console\Attribute\AsCommand;
 
 #[AsCommand(name: 'make:request')]

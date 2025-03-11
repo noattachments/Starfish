@@ -1,6 +1,6 @@
 <?php
 
-namespace Foundation\Infrastructure\Console;
+namespace Foundation\Console;
 
 use Illuminate\Support\Str;
 use Symfony\Component\Console\Attribute\AsCommand;
