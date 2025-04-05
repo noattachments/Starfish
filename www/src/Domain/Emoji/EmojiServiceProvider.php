@@ -20,6 +20,16 @@ class EmojiServiceProvider extends ServiceProvider
         $this->registerRoutes();
     }
 
+    private function getAllData()
+    {
+        $data = Cache::remember('data', now()->addDay(1), function () {
+            // This is the query you want to cache
+            return \Domain\Emoji\Models\Emoji::all();
+        });
+
+        return $data;
+    }
+
     private function getDataGroups()
     {
         $groups = Cache::remember('distinct_groups', now()->addDay(1), function () {
@@ -67,7 +77,7 @@ class EmojiServiceProvider extends ServiceProvider
 
             Route::get('/all', function(){
                 return response()->json(
-                    \Domain\Emoji\Models\Emoji::all()
+                    $this->getAllData()
                 );
             });
 

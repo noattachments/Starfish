@@ -11,6 +11,7 @@ class Emoji extends Model
     protected $fillable = [
         'emoji',
         'hexcode',
+        'htmlCode',
         'group',
         'subgroup',
         'annotation',
