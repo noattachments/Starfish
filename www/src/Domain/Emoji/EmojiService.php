@@ -43,6 +43,7 @@ class EmojiService
                 $emoji = (new Emoji(
                     emoji: $emojiData['emoji'],
                     hexcode: $emojiData['hexcode'],
+                    htmlCode: $emojiData['hexcode'],
                     group: $emojiData['group'],
                     subgroup: $emojiData['subgroup'],
                     annotation: $emojiData['annotation'],
