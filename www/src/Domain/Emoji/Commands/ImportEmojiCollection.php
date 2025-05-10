@@ -1,12 +1,10 @@
 <?php
 
-namespace App\Console\Commands;
+namespace Domain\Emoji\Commands;
 
 use Domain\Emoji\EmojiService;
 use Exception;
 use Illuminate\Console\Command;
-use Illuminate\Contracts\Filesystem\FileNotFoundException;
-
 class ImportEmojiCollection extends Command
 {
     /**
@@ -14,7 +12,7 @@ class ImportEmojiCollection extends Command
      *
      * @var string
      */
-    protected $signature = 'app:import-emoji-collection {file?}';
+    protected $signature = 'domain:import-emoji-collection {file?}';
 
     /**
      * The console command description.
@@ -31,10 +29,10 @@ class ImportEmojiCollection extends Command
     /**
      * @param EmojiService $emojiService
      */
-    public function __construct(EmojiService $emojiService)
+    public function __construct()
     {
         parent::__construct();
-        $this->emojiService = $emojiService;
+        $this->emojiService = new EmojiService();
     }
 
     /**
